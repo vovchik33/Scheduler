@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean id="startRoundDataConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="cmd" value="gameStart"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="gameStatusDataConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="cmd" value="gameStatus"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="showPlayersPanelDataConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="cmd" value="101"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="hidePlayersPanelDataConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="cmd" value="101"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="showWinnersPanelDataConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="cmd" value="102"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="hideWinnersPanelDataConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="cmd" value="102"/>
+                     </map>
+              </property>
+       </bean>
+</beans>

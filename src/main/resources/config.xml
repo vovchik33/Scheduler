@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean id="startRoundConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="repeatable" value="true"/>
+                            <entry key="delay" value="0"/>
+                            <entry key="interval" value="20"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="gameStatusConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="repeatable" value="true"/>
+                            <entry key="delay" value="1"/>
+                            <entry key="interval" value="5"/>
+                     </map>
+              </property>
+       </bean>
+
+       <bean id="showPlayersPanelConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="repeatable" value="true"/>
+                            <entry key="delay" value="5"/>
+                            <entry key="interval" value="20"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="hidePlayersPanelConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="repeatable" value="true"/>
+                            <entry key="delay" value="15"/>
+                            <entry key="interval" value="20"/>
+                     </map>
+              </property>
+       </bean>
+
+       <bean id="showWinnersPanelConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="repeatable" value="true"/>
+                            <entry key="delay" value="16"/>
+                            <entry key="interval" value="20"/>
+                     </map>
+              </property>
+       </bean>
+       <bean id="hideWinnersPanelConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="repeatable" value="true"/>
+                            <entry key="delay" value="20"/>
+                            <entry key="interval" value="20"/>
+                     </map>
+              </property>
+       </bean>
+</beans>

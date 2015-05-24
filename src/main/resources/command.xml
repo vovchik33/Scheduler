@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <import resource="dataconfig.xml"/>
+       <import resource="connector.xml"/>
+
+       <bean id="startRoundCommand" class="pttv.tvdirector.scheduler.command.SchedulerCommand" scope="prototype">
+              <property name="connector" ref="socketConnector"/>
+              <property name="params" ref="startRoundDataConfig"/>
+       </bean>
+       <bean id="gameStatusCommand" class="pttv.tvdirector.scheduler.command.SchedulerCommand" scope="prototype">
+              <property name="connector" ref="socketConnector"/>
+              <property name="params" ref="gameStatusDataConfig"/>
+       </bean>
+       <bean id="showPlayersPanelCommand" class="pttv.tvdirector.scheduler.command.SchedulerCommand" scope="prototype">
+              <property name="connector" ref="socketConnector"/>
+              <property name="params" ref="showPlayersPanelDataConfig"/>
+       </bean>
+       <bean id="hidePlayersPanelCommand" class="pttv.tvdirector.scheduler.command.SchedulerCommand" scope="prototype">
+              <property name="connector" ref="socketConnector"/>
+              <property name="params" ref="hidePlayersPanelDataConfig"/>
+       </bean>
+       <bean id="showWinnersPanelCommand" class="pttv.tvdirector.scheduler.command.SchedulerCommand" scope="prototype">
+              <property name="connector" ref="socketConnector"/>
+              <property name="params" ref="showWinnersPanelDataConfig"/>
+       </bean>
+       <bean id="hideWinnersPanelCommand" class="pttv.tvdirector.scheduler.command.SchedulerCommand" scope="prototype">
+              <property name="connector" ref="socketConnector"/>
+              <property name="params" ref="hideWinnersPanelDataConfig"/>
+       </bean>
+</beans>

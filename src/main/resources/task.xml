@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <import resource="config.xml"/>
+       <import resource="command.xml"/>
+
+       <bean id="startRoundTask" class="pttv.tvdirector.scheduler.task.SchedulerTask" scope="prototype">
+              <property name="commands">
+                     <list>
+                            <ref bean="startRoundCommand"/>
+                     </list>
+              </property>
+              <property name="params" ref="startRoundConfig"/>
+       </bean>
+       <bean id="gameStatusTask" class="pttv.tvdirector.scheduler.task.SchedulerTask" scope="prototype">
+              <property name="commands">
+                     <list>
+                            <ref bean="gameStatusCommand"/>
+                     </list>
+              </property>
+              <property name="params" ref="gameStatusConfig"/>
+       </bean>
+       <bean id="showPlayersPanelTask" class="pttv.tvdirector.scheduler.task.SchedulerTask" scope="prototype">
+              <property name="commands">
+                     <list>
+                            <ref bean="showPlayersPanelCommand"/>
+                     </list>
+              </property>
+              <property name="params" ref="showPlayersPanelConfig"/>
+       </bean>
+       <bean id="hidePlayersPanelTask" class="pttv.tvdirector.scheduler.task.SchedulerTask" scope="prototype">
+              <property name="commands">
+                     <list>
+                            <ref bean="hidePlayersPanelCommand"/>
+                     </list>
+              </property>
+              <property name="params" ref="hidePlayersPanelConfig"/>
+       </bean>
+       <bean id="showWinnersPanelTask" class="pttv.tvdirector.scheduler.task.SchedulerTask" scope="prototype">
+              <property name="commands">
+                     <list>
+                            <ref bean="showWinnersPanelCommand"/>
+                     </list>
+              </property>
+              <property name="params" ref="showWinnersPanelConfig"/>
+       </bean>
+       <bean id="hideWinnersPanelTask" class="pttv.tvdirector.scheduler.task.SchedulerTask" scope="prototype">
+              <property name="commands">
+                     <list>
+                            <ref bean="hideWinnersPanelCommand"/>
+                     </list>
+              </property>
+              <property name="params" ref="hideWinnersPanelConfig"/>
+       </bean>
+
+</beans>

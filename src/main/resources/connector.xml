@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean id="socketConnector" class="pttv.tvdirector.scheduler.connector.SocketConnector" scope="singleton">
+              <property name="params" ref="socketConnectorConfig"/>
+       </bean>
+
+       <bean id="socketConnectorConfig" class="pttv.tvdirector.scheduler.data.ConfigVO">
+              <property name="data">
+                     <map>
+                            <entry key="server" value="127.0.0.1"/>
+                            <entry key="port" value="1300"/>
+                     </map>
+              </property>
+       </bean>
+</beans>
